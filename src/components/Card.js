@@ -30,12 +30,13 @@ const Card = styled.div`
 	overflow: hidden;
 	margin: 20px auto;
 	transition: transform 0.3s ease-in-out;
-	transform: rotateY(180deg) translateZ(0px);
-
+	transform-style: preserve-3d;
+	transform: rotateY(180deg) translateZ(0px) translateY(0px);
+	// backface-visibility: hidden;
 	&:hover {
 		cursor: pointer;
-		transform: rotateY(180deg) translateZ(20px);
-		box-shadow: 0px 10px 40px 2px #00000011;
+		transform: rotateY(180deg) translateZ(200px) translateY(0px);
+		box-shadow: 0px 10px 40px 0px #00000055;
 
 		${Img} {
 			width: 95%;
@@ -61,7 +62,7 @@ const Desc = styled.p`
 	text-align: center;
 `;
 
-export default function({ colHeight, url }) {
+export default function CardComp({ colHeight, url }) {
 	let [rating, setRating] = useState(4);
 
 	return (

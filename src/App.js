@@ -1,10 +1,16 @@
 import React, { Component } from "react";
 import Cylinder from "./components/Cylinder";
-import "./App.css";
 
 class App extends Component {
 	render() {
-		return <Cylinder />;
+		return (
+			<>
+				<div style={{ width: "100vw", height: "100vh", overflow: "hidden" }}>
+					<Cylinder />
+				</div>
+				<h1> hellow</h1>
+			</>
+		);
 	}
 }
 
