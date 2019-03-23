@@ -2,40 +2,7 @@ import React from "react";
 import Card from "./Card";
 import styled from "styled-components";
 import { rotate } from "./keyframes";
-
-import venom from "../assets/img/venom.jpg";
-import airbender from "../assets/img/airbender.jpg";
-import aliens from "../assets/img/aliens.jpg";
-import assassin from "../assets/img/assassin.jpg";
-import escaped from "../assets/img/escape.jpg";
-import flash from "../assets/img/flash.jpg";
-import harrypotter from "../assets/img/harrypotter.jpg";
-import ironman from "../assets/img/ironman.jpg";
-import joniuk from "../assets/img/jonuik.jpg";
-import robinhood from "../assets/img/robinhood.jpg";
-import spiderman from "../assets/img/spiderman.jpg";
-import starwar from "../assets/img/starwar.jpg";
-import superman from "../assets/img/superman.jpg";
-import thor from "../assets/img/thor.jpg";
-import valerian from "../assets/img/valerian.jpg";
-
-const images = [
-  venom,
-  airbender,
-  aliens,
-  assassin,
-  escaped,
-  flash,
-  harrypotter,
-  ironman,
-  joniuk,
-  robinhood,
-  spiderman,
-  starwar,
-  superman,
-  thor,
-  valerian
-];
+import {images, titles} from "./data"
 
 const colWidth = 270;
 const colHeight = 800;
@@ -80,11 +47,12 @@ for (let i = 0; i < count; i++) {
   let Col = styled(Column)`
     transform: rotateY(${i * rotateY + 180}deg) translateZ(${distance}px);
   `;
-
+	let index = i % images.length
   columns.push(
     <Col key={i}>
-      <Card url={images[i % images.length]} onMouseOver={() => {}} />
-      <Card url={images[(i + 9) % images.length]} />
+      <Card url={images[index]} title={titles[index]} />
+      <Card url={images[(i + 9) % images.length] }
+						title ={titles[(i + 9) % images.length]}  />
     </Col>
   );
 }
