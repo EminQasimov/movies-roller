@@ -17,11 +17,11 @@ let columns = [];
 const Cylinder = styled.div`
   position: relative;
   width: ${colWidth}px;
-  top: 0;
+  top: 20px;
   left: 50%;
   transform: translate(-50%);
   perspective: ${distance * 2 - 33}px;
-  perspective-origin: center 50vh;
+  perspective-origin: center 30vh;
 `;
 
 const ColmunWrapper = styled.div`
@@ -60,7 +60,6 @@ for (let i = 0; i < count; i++) {
 export default function() {
   return (
     <Cylinder>
-    
       <ColmunWrapper>{columns}</ColmunWrapper>
     </Cylinder>
   );
