@@ -62,14 +62,14 @@ const Desc = styled.p`
 	text-align: center;
 `;
 
-export default function CardComp({ colHeight, url }) {
+export default function CardComp({ colHeight, url, title }) {
 	let [rating, setRating] = useState(4);
 
 	return (
 		<Card colHeight={colHeight}>
 			<Detail>MOVIE DETAILS</Detail>
 			<Img src={url} />
-			<Title>Venom 2018</Title>
+			<Title>{title}</Title>
 			<div style={{ textAlign: "center" }}>
 				<StarRatingComponent
 					name="rate1"
