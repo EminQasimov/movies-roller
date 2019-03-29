@@ -48,7 +48,7 @@ const Column = styled.div`
   backface-visibility: none;
   transition: opacity .3s linear; 
 `;
-
+//generating columns with Cards
 for (let i = 0; i < count; i++) {
   let rotDeg = i * rotateY + 180;
   let Col = styled(Column)`
