@@ -61,7 +61,7 @@ const Desc = styled.p`
 `;
 
 export default function CardComp({ colHeight, url, title }) {
-	let [rating, setRating] = useState(4);
+	let [rating, setRating] = useState(Math.floor(Math.random()*5));
 
 	return (
 		<>
