@@ -17,8 +17,9 @@ const Img = styled.div`
 	margin: 15px auto;
 	transition: width .3s ease-in-out;
 	box-shadow: 0px 27px 63px -14px #0000009e, 0px -25px 40px -20px #00000054;
-	animation: ${move} 3s ease infinite;
+	animation: ${move} 5s ease infinite;
 `;
+
 const Card = styled.div`
 	width: 210px;
 	min-height: 430px;
@@ -27,21 +28,18 @@ const Card = styled.div`
 	border-radius: 20px;
 	text-align: left;
 	background-color: #fdf6f6;
-	overflow: hidden;
 	margin: 20px auto;
-	transition: transform 0.3s ease-in-out;
+	transition: transform 0.3s ease-in-out,box-shadow 0.3s ease-in-out;;
 	transform-style: preserve-3d;
 	transform: rotateY(180deg) translateZ(0px) translateY(0px);
-	// backface-visibility: hidden;
-	&:hover {
-		cursor: pointer;
-		transform: rotateY(180deg) translateZ(200px) translateY(0px);
-		box-shadow: 0px 10px 40px 0px #00000055;
+	backface-visibility: hidden;
 
-		${Img} {
-			width: 95%;
-		}
-	}
+	:hover {
+		cursor: pointer;
+		transform: rotateY(180deg) translateZ(150px) translateY(0px);
+		box-shadow: 0px 10px 30px 0px rgba(0,0,0,.2);
+ 
+	} 
 `;
 const Detail = styled.div`
 	font-weight: 600;
@@ -66,23 +64,26 @@ export default function CardComp({ colHeight, url, title }) {
 	let [rating, setRating] = useState(4);
 
 	return (
-		<Card colHeight={colHeight}>
-			<Detail>MOVIE DETAILS</Detail>
-			<Img src={url} />
-			<Title>{title}</Title>
-			<div style={{ textAlign: "center" }}>
-				<StarRatingComponent
-					name="rate1"
-					starCount={5}
-					value={rating}
-					renderStarIcon={() => <Star size="14" />}
-					onStarClick={nextValue => {
-						setRating(nextValue);
-					}}
-				/>
-			</div>
-			<Desc>Journalist Eddie Brock is trying to take down Carlton Drake</Desc>
-			<Back size="20" />
-		</Card>
+		<>
+			<Card colHeight={colHeight}>
+				<Detail>MOVIE DETAILS</Detail>
+				<Img src={url} />
+				<Title>{title}</Title>
+				<div style={{ textAlign: "center" }}>
+					<StarRatingComponent
+						name="rate1"
+						starCount={5}
+						value={rating}
+						renderStarIcon={() => <Star size="16" />}
+						emptyStarColor={"#777"} 
+						onStarClick={nextValue => {
+							setRating(nextValue);
+						}}
+					/>
+				</div>
+				<Desc>Journalist Eddie Brock is trying to take down Carlton Drake</Desc>
+				<Back size="20" style={{color: "#777"}}/>
+			</Card>
+		</>
 	);
 }
