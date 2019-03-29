@@ -29,7 +29,7 @@ const ColmunWrapper = styled.div`
   left: 0;
   top: 0;
   transform-style: preserve-3d;
-  animation: ${rotate(distance)} 300s linear infinite;
+  animation: ${rotate(distance)} 200s linear infinite;
   animation-fill-mode: forwards;
   :hover {
     animation-play-state: paused;
