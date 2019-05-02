@@ -12,12 +12,38 @@ const Img = styled.div`
 	background-image: url(" ${({ src }) => src}");
 	background-size: cover;
 	background-repeat: no-repeat;
-	border-radius: 10px;
 	box-sizing: border-box;
 	margin: 15px auto;
+	border-radius: 10px;
 	transition: width .3s ease-in-out;
-	box-shadow: 0px 27px 63px -14px #0000009e, 0px -25px 40px -20px #00000054;
+	// box-shadow: 0px 27px 63px -14px #0000009e, 0px -25px 40px -20px #00000054;
 	animation: ${move} 5s ease infinite;
+
+	&::before {
+		content: "";
+		width: 100%;
+		height: 100%;
+		display: block;
+		background: inherit;
+		position: absolute;
+		z-index: 99;
+		border-radius: 10px;
+
+	}
+	// ios shadow effect with filter blur
+	&::after {
+		content: "";
+		width: 100%;
+		height: 100%;
+		display: block;
+		background: inherit;
+		filter: blur(20px);
+		position: absolute;
+		border-radius: 10px;
+		z-index:-1;
+		top: 10px;
+	} 
+
 `;
 
 const Card = styled.div`
@@ -39,7 +65,8 @@ const Card = styled.div`
 		transform: rotateY(180deg) translateZ(150px) translateY(0px);
 		box-shadow: 0px 10px 30px 0px rgba(0,0,0,.2);
  
-	} 
+	}
+	
 `;
 const Detail = styled.div`
 	font-weight: 600;
