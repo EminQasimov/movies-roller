@@ -4,16 +4,16 @@ self.__precacheManifest = [
     "url": "/movies-roller/static/media/harrypotter.f4679eae.jpg"
   },
   {
-    "revision": "c56228a6400deaaa53c9",
-    "url": "/movies-roller/static/css/main.769086c8.chunk.css"
+    "revision": "4cfbe0ae3199375f6ea0",
+    "url": "/movies-roller/static/css/main.954cbd10.chunk.css"
   },
   {
-    "revision": "31de2eed511612221aac",
-    "url": "/movies-roller/static/js/runtime~main.48a47607.js"
+    "revision": "f1b8fa83214dc6623c54",
+    "url": "/movies-roller/static/js/runtime~main.7957b7c6.js"
   },
   {
-    "revision": "53d842fbe433844137b0",
-    "url": "/movies-roller/static/js/2.3829dcdb.chunk.js"
+    "revision": "961540490a0615db8130",
+    "url": "/movies-roller/static/js/2.6fa3f009.chunk.js"
   },
   {
     "revision": "a3cf144f486d5656e8a2d9756d2a789e",
@@ -40,8 +40,8 @@ self.__precacheManifest = [
     "url": "/movies-roller/static/media/flash.e2e4ffc5.jpg"
   },
   {
-    "revision": "c56228a6400deaaa53c9",
-    "url": "/movies-roller/static/js/main.5c9a5b22.chunk.js"
+    "revision": "4cfbe0ae3199375f6ea0",
+    "url": "/movies-roller/static/js/main.53fe9d46.chunk.js"
   },
   {
     "revision": "c7c2b6191be6c3a46d8c3e944b186959",
@@ -76,7 +76,7 @@ self.__precacheManifest = [
     "url": "/movies-roller/static/media/valerian.bc96cb8b.jpg"
   },
   {
-    "revision": "81083a3b7ef0fa3d16712c300726e21e",
+    "revision": "296f0b72ac09876b75e5b96513d2210c",
     "url": "/movies-roller/index.html"
   }
 ];
